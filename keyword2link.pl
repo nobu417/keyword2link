@@ -1,5 +1,5 @@
 #
-# keyword2text -- make keyword to link
+# keyword2link -- make keyword to link
 #
 # Copyright (c) 2012 Nobuyuki Sato
 # <http://www.nobu417.jp/>
