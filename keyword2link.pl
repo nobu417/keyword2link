@@ -22,11 +22,11 @@ sub keyword2link {
 	my $google = "http://www.google.com/search?q=";
 
 	if ($text =~ /\[a\[([^\]]*)\]\]/) {
-		$text =~ s/\[a\[([^\]]*)\]\]/<span class="amazon"><a href="$amazon$1">$1<\/a><\/span>/ig;
+		$text =~ s/\[a\[([^\]]*)\]\]/<a href="$amazon$1" class="amazon">$1<\/a>/ig;
 	} elsif ($text =~ /\[g\[([^\]]*)\]\]/) {
-		$text =~ s/\[g\[([^\]]*)\]\]/<span class="google"><a href="$google$1">$1<\/a><\/span>/ig;
+		$text =~ s/\[g\[([^\]]*)\]\]/<a href="$google$1" class="google">$1<\/a>/ig;
 	} else {
-		$text =~ s/\[\[([^\]]*)\]\]/<span class="keyword"><a href="$url$1">$1<\/a><\/span>/ig;
+		$text =~ s/\[\[([^\]]*)\]\]/<a href="$url$1" class="keyword">$1<\/a>/ig;
 	}
 	$text;
 }
